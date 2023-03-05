@@ -2,8 +2,4 @@ print("Hello World")
 
 
 
-
-
-
-
-şdlksjşflksdgi
+git
