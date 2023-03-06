@@ -4,7 +4,7 @@
 
 
 
-### QUESTION 4
+### QUESTION 5
 # Take two strings from user and replace substring with another substring.
 flag = True
 
