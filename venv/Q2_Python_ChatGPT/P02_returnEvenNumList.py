@@ -6,26 +6,36 @@
 ### QUESTION 1
 # Write a program that takes a list of integers as input and returns a new list with only the even numbers from the original list.
 
-print("This program takes list of integers from you as input and returns a new list with only even numbers."
-      "\nTo finish entering elements of your list, please press 'Q' ")
 
-lst = []
+def get_even_numbers(numbers_list):
+    # Initialize an empty list to hold even numbers
+    even_numbers = []
 
-nums = (input("Please enter your elements : "))
+    # Iterate over each number in the list
+    for num in numbers_list:
+        # Check if the number is even
+        if num % 2 == 0:
+            # If it's even, append it to the list of even numbers
+            even_numbers.append(num)
 
-while (nums != "Q"):
-    if nums != "Q" or "q":
-        for i in range(0, nums):
-            elements = int(nums)
+    # Return the list of even numbers
+    return even_numbers
 
-            lst.append(elements)
-    else:
-        break
 
-newLst = []
+# Example usage
 
-for i in lst:
-    if i % 2 == 0:
-        newLst.append(i)
+numbers = []
 
-print(newLst)
+# number of elements as input
+n = int(input("This program takes integer list from you and returns a new list with only the even numbers from the original list."
+              "\nEnter your list length : "))
+
+# iterating till the range
+for i in range(0, n):
+    elements = int(input("Enter your element : "))
+
+    numbers.append(elements)  # adding the element
+
+
+even_numbers = get_even_numbers(numbers)
+print("\nYour list with only even numbers : ", even_numbers)
