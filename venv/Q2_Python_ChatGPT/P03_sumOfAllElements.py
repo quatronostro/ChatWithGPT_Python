@@ -6,15 +6,12 @@
 ### QUESTION 1
 # Write a program that takes a list of strings as input and returns a new list with only the strings that start with a capital letter.
 
-def getCapitals(text_list):
-
- capitals_list = []
-
- for i in text_list:
-     if (i[0].isupper()):
-         capitals_list.append(i)
-
-         return capitals_list
+def upperControler(text_list):
+    newList = []
+    for i in text_list:
+        if i[0].isupper():
+            newList.append(i)
+    return newList
 
 
 text_list = []
@@ -27,5 +24,7 @@ for i in range(0, n):
 
     text_list.append(elements)
 
-capitals_list = getCapitals(text_list)
-print("\nYour new list : ", capitals_list)
+
+
+print("Here your new list : ", upperControler(text_list))
+
