@@ -21,18 +21,21 @@ def swap_strings_in_tuple(tuples_list):
     # Return the list of swapped tuples
     return swapped_tuples
 
-try:
-    input_list = ast.literal_eval(
-        input('Enter a valid Python set, e.g. {"a", "b"}: ')
-    )
-except ValueError:
-    print('The provided value is not a set object')
 
-print(input_list)
+# Get user input for the list of tuples
+tuples_list = []
+n = int(input("Enter the number of tuples: "))
+for i in range(n):
+    tup = tuple(input(f"Enter tuple {i + 1} (comma-separated values): ").split(","))
+    tuples_list.append(tup)
+
+# Call the function to swap the strings in each tuple
+swapped_tuples = swap_strings_in_tuple(tuples_list)
+
+# Print the resulting list of swapped tuples
+print("Original List of Tuples: ", tuples_list)
+print("Swapped List of Tuples: ", swapped_tuples)
 
 
-# Example usage
-tuples = [('hello', 'world'), ('good', 'morning'), ('how', 'are you')]
-swapped_tuples = swap_strings_in_tuple(tuples)
-print(swapped_tuples)
+
 
