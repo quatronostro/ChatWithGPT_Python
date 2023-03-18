@@ -6,5 +6,20 @@
 ### QUESTION 7
 # Write a program that takes a string as input and returns the string with all the vowels removed
 
+
+print("This program takes a string from you and returns the string with all the vowels removed.")
 text = input("Enter your text : ")
+
+
+result = str()
+for i in text:
+    if i not in "aeiouAEIOU":
+        result = result + i
+    else:
+        pass
+
+
+print(result)
+
+
 
