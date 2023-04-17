@@ -7,17 +7,19 @@
 # Write a program that prompts the user to enter a number and then prints out
 # all the prime numbers less than or equal to that number.
 
-try:
-    num = int(input("Enter your number here : "))
-except:
-    print("You have to enter a number!")
 
-if num == 1:
-    print(num, "is not a prime number")
-elif num > 1:
-    i = 1
-    for i in range(num):
-        if (num % i) == 0:
-            print(i)
-else:
-    print("You have to enter positive number")
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+num = int(input("Enter your number here : "))
+
+
+print("Prime numbers less than or equal to", num, ":")
+for i in range(2, num + 1):
+    if is_prime(i):
+        print(i)

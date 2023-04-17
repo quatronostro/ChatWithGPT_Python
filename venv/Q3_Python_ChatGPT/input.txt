@@ -1,0 +1,8 @@
+Hello
+
+This is a txt file for python exercise
+This file will read from Python and will create new output file
+
+In this file you will see this text with no vowels
+
+Thank you for reading...
